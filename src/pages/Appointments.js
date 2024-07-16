@@ -1,7 +1,6 @@
 // src/pages/Appointments.js
 import React from 'react';
 import Appointment from '../components/Appointment';
-import Header from '../components/Header';
 
 const Appointments = () => {
     const appointments = [
@@ -11,8 +10,8 @@ const Appointments = () => {
 
     return (
         <div>
-            <Header />
             <h1>Appointments</h1>
+            <h4>Manage your appointments here</h4>
             {appointments.map((appointment, index) => (
                 <Appointment key={index} appointment={appointment} />
             ))}

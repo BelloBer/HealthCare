@@ -16,10 +16,10 @@ function App() {
             <GlobalStyles />
             <Header/>
             <Routes>
-                <Route path="/" exact component={Dashboard} />
-                <Route path="/appointments" component={Appointments} />
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
+                <Route path="/" exact element={<Dashboard/>} />
+                <Route path="/appointments" element={<Appointments/>} />
+                <Route path="/login" element={<Login/>} />
+                <Route path="/register" element={<Register/>} />
             </Routes>
         </ThemeProvider>
     );
