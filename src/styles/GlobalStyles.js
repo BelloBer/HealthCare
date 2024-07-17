@@ -12,6 +12,9 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
+  label {
+    color: ${(props) => props.theme.bodyFontColor};
+  }
 `;
 
 export default GlobalStyles;

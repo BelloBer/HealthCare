@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import GlobalStyle from './styles/GlobalStyles';
 import reportWebVitals from './reportWebVitals';
+import "./index.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
