@@ -20,6 +20,11 @@ const NavLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
+
+  .icon {
+    margin-right: 5px;
+    
+  }
 `;
 
 const Header = () => {
@@ -27,9 +32,9 @@ const Header = () => {
         <Nav>
             <h1>Healthcare Portal</h1>
             <div>
-                <NavLink to="Home"><FontAwesomeIcon icon={faHome} />Home</NavLink>
-                <NavLink to="/"><FontAwesomeIcon icon={faTachometerAlt} />Dashboard</NavLink>
-                <NavLink to="/appointments"><FontAwesomeIcon icon={faCalendarAlt} />Appointments</NavLink>
+                <NavLink to="/"><FontAwesomeIcon className="icon" icon={faHome} />Home</NavLink>
+                <NavLink to="/Dashboard"><FontAwesomeIcon className="icon" icon={faTachometerAlt} />Dashboard</NavLink>
+                <NavLink to="/appointments"><FontAwesomeIcon className="icon" icon={faCalendarAlt} />Appointments</NavLink>
                 <NavLink to="/login">Login</NavLink>
             </div>
         </Nav>

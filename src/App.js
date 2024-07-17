@@ -10,6 +10,7 @@ import Appointments from './pages/Appointments';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Footer from './components/Footer';
+import Home from './pages/Home';
 
 function App() {
     return (
@@ -17,7 +18,8 @@ function App() {
             <GlobalStyles />
             <Header/>
             <Routes>
-                <Route path="/" exact element={<Dashboard/>} />
+                <Route path="/" exact element={<Home/>} />
+                <Route path="/Dashboard" element={<Dashboard/>} />
                 <Route path="/appointments" element={<Appointments/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/register" element={<Register/>} />
