@@ -14,12 +14,11 @@ const Container = styled.div`
 `;
 
 const SectionTitle = styled.h3`
-  color: ${(props) => props.theme.white};
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
-  padding: 8px;
-  border-top: 1px solid #000591;
+  color: ${(props) => props.theme.primaryColor};
   font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid ${(props) => props.theme.primaryColor};
 `;
 
 const FilterContainer = styled.div`
@@ -66,8 +65,9 @@ const FilterOption = styled.div`
 
 const FilterLabel = styled.label`
   font-size: 1rem;
+  font-weight: bold;
   margin-right: 1rem;
-  color: white;
+  color: ${(props) => props.theme.primaryColor};
 `;
 
 const CardContainer = styled.div`
@@ -82,8 +82,12 @@ const Card = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   text-align: center;
-  width: 300px;
+  width: 250px;
   margin: 1rem;
+
+  p{
+    color: #111;
+  }
 `;
 
 const HospitalImage = styled.img`

@@ -33,8 +33,7 @@ const Header = () => {
             <h1>Healthcare Portal</h1>
             <div>
                 <NavLink to="/"><FontAwesomeIcon className="icon" icon={faHome} />Home</NavLink>
-                <NavLink to="/Dashboard"><FontAwesomeIcon className="icon" icon={faTachometerAlt} />Dashboard</NavLink>
-                <NavLink to="/appointments"><FontAwesomeIcon className="icon" icon={faCalendarAlt} />Appointments</NavLink>
+                <NavLink to="/register">Register</NavLink>
                 <NavLink to="/login">Login</NavLink>
             </div>
         </Nav>

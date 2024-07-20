@@ -37,4 +37,27 @@ form .input-box{
 
 .remember-forgot{
     padding-right: 4px;
+    
+}
+
+.rememberMe{
+    margin-right: 10px;
+}
+
+.authButton{
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    width: 100px;
+    background-color: #647587;
+    box-shadow: 1px 4px 1px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.goal {
+    text-align: center;
 }

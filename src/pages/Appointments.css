@@ -4,18 +4,10 @@
   
   .appointments-cards {
     display: flex;
-    gap: 2rem;
+    
     justify-content: center;
     flex-wrap: wrap;
   }
   
-  .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
-    width: 250px;
-    margin: 1rem;
-  }
+  
   

@@ -1,14 +1,10 @@
-// src/components/HomeContent.js
+// src/components/LandingContent.js
 import React from 'react';
 import styled from 'styled-components';
-import Hospitals from './Hospitals';
 import Introduction from './Introduction';
 
 
 const MainContainer = styled.main`
-  
-  padding-left: 1rem;
-  padding-right: 1rem;
   box-sizing: border-box;
   text-align: center;
   min-height: 100vh;
@@ -25,7 +21,8 @@ const Background = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
-  border-radius: 8px;
+  
+  
 `;
 
 const Overlay = styled.div`
@@ -49,10 +46,7 @@ const Subtitle = styled.p`
 `;
 
 
-
-
-
-const HomeContent = () => {
+const LandingContent = () => {
     return (
         <MainContainer>
             <Background>
@@ -62,10 +56,10 @@ const HomeContent = () => {
                 </Overlay>
             </Background>
             <Introduction/>
-            <Hospitals />
+            
 
         </MainContainer>
     );
 }
 
-export default HomeContent;
+export default LandingContent;
