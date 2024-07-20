@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
   label {
     color: ${(props) => props.theme.bodyFontColor};
   }
+
+  
 `;
+
+
 
 export default GlobalStyles;

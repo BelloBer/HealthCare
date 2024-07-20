@@ -1,0 +1,13 @@
+.appointments {
+    padding: 2rem;
+  }
+  
+  .appointments-cards {
+    display: flex;
+    
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  
+  
