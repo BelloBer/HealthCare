@@ -3,7 +3,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faPerson, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPerson, faQuestion, faUser } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
@@ -37,7 +37,7 @@ const MainHeader = () => {
             <h1>Healthcare Portal</h1>
             <div>
                 <NavLink to="/home"><FontAwesomeIcon className="icon" icon={faHome} />Home</NavLink>
-                <NavLink to="/profile"><FontAwesomeIcon className="icon" icon={faPerson} />Profile</NavLink>
+                <NavLink to="/profile"><FontAwesomeIcon className="icon" icon={faUser} />Profile</NavLink>
                 <NavLink to="/help"><FontAwesomeIcon className="icon" icon={faQuestion} />Help</NavLink>
             </div>
         </Nav>

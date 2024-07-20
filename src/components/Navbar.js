@@ -2,8 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseChimneyMedical, faCalendarAlt, faSignOutAlt, faHospital} from '@fortawesome/free-solid-svg-icons';
+import { faHouseChimneyMedical, faSignOutAlt, faHospital, faGear, faEnvelope, faClock} from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
+import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 
 const Sidebar = styled.nav`
     margin-top: 90px;
@@ -17,7 +18,7 @@ const Sidebar = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+    padding-top: 10px;
 `;
 
 const SidebarLink = styled(Link)`
@@ -38,7 +39,7 @@ const SidebarLink = styled(Link)`
 
 const SidebarButton = styled.button`
     width: 100%;
-    padding: 10px 20px;
+    padding: 20px 20px;
     color: #fff;
     background: none;
     border: none;
@@ -47,6 +48,9 @@ const SidebarButton = styled.button`
     align-items: center;
     &:hover {
         background: ${(props) => props.theme.secondaryColor};
+    }
+    .icon {
+    margin-right: 10px;
     }
 `;
 
@@ -57,10 +61,19 @@ const Navbar = ({ onLogout }) => {
                 <FontAwesomeIcon icon={faHouseChimneyMedical} className='icon' /> Dashboard
             </SidebarLink>
             <SidebarLink to="/appointments">
-                <FontAwesomeIcon icon={faCalendarAlt} className='icon' /> Appointments
+                <FontAwesomeIcon icon={faClock} className='icon' /> Appointments
+            </SidebarLink>
+            <SidebarLink to="/doctors">
+                <FontAwesomeIcon icon={faUserMd} className='icon' /> Doctors
             </SidebarLink>
             <SidebarLink to="/hospitals">
                 <FontAwesomeIcon icon={faHospital} className='icon' /> Hospitals
+            </SidebarLink>
+            <SidebarLink to="/messages">
+                <FontAwesomeIcon icon={faEnvelope} className='icon' /> Messages
+            </SidebarLink>
+            <SidebarLink to="/settings">
+                <FontAwesomeIcon icon={faGear} className='icon' /> Settings
             </SidebarLink>
             <SidebarButton onClick={onLogout}>
                 <FontAwesomeIcon icon={faSignOutAlt} className='icon' /> Logout
