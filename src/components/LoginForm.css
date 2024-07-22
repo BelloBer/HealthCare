@@ -9,11 +9,21 @@
     border-radius: 10px;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 5%;
+    background: rgba(112, 125, 148, 0.8);
 }
 .wrapper .login-form{
     width: 100%;
     padding: 40px;
     
+}
+
+.registerform {
+    background: url(/public/dna4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
 }
 
 form .input-box{
@@ -22,6 +32,7 @@ form .input-box{
     height: 50px;
     margin: 30px 0;
 }
+
 .input-box input{
     width: 80%;
     height: 10%;
@@ -65,4 +76,8 @@ form .input-box{
     color: red;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.changeAuth a {
+    color: blue;
 }

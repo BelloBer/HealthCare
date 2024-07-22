@@ -1,7 +1,7 @@
 // src/components/DashboardComponent.js
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft, faArrowAltCircleRight, faHeartbeat, faNotesMedical, faUserMd } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faHeartbeat, faNotesMedical, faUserMd } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const Container = styled.div`

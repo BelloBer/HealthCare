@@ -1,10 +1,9 @@
 // src/App.js
 import React, { useState } from 'react';
-import { Route, Routes, useLocation, Navigate  } from 'react-router-dom';
+import { Route, Routes, Navigate  } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import { theme } from './styles/theme';
-import Header from './components/Header';
 import MainHeader from './components/MainHeader';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
@@ -13,7 +12,6 @@ import Hospitals from './components/Hospitals';
 import Login from './pages/Login';
 import Logout from './components/Logout';
 import Register from './pages/Register';
-import Footer from './components/Footer';
 import Landing from './pages/Landing';
 import Home from './pages/Home';
 import './App.css';
@@ -55,14 +53,14 @@ function App() {
                 </div>
             ) : (
                 <div>
-                <Header />
+                
                 <Routes>
                     <Route path="/" exact element={<Landing/>} />
                     <Route path="/login" element={<Login onLogin={handleLogin} />} />
                     <Route path="/register" element={<Register/>} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
-                <Footer/>
+                
                 </div>
             )}
 
