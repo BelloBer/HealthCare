@@ -1,5 +1,7 @@
 // src/components/DoctorsContent.js
 import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import styled from "styled-components";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
@@ -80,7 +82,7 @@ const doctorsData = [
     },
     image: "doc6.jpg"
   },
-  // Add more doctors as needed
+  // More doctors below
 ];
 
 const Container = styled.div`
@@ -98,7 +100,7 @@ const IntroSection = styled.div`
   margin-bottom: 2rem;
 `;
 
-const IntroImage = styled.img`
+const IntroImage = styled(LazyLoadImage)`
   width: 100%;
   max-width: 800px;
   height: auto;
@@ -120,7 +122,7 @@ const DoctorCard = styled.div`
   background-color: ${(props) => props.theme.secondaryBackgroundColor};
   border-radius: 8px;
   margin-bottom: 2rem;
-  width: 80%;
+  width: 95%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 `;
@@ -198,7 +200,9 @@ const DoctorsContent = () => {
       </IntroSection>
       {doctorsData.map((doctor, index) => (
         <DoctorCard key={index}>
-          <DoctorImage src={doctor.image} alt={`Picture of ${doctor.name}`} />
+          <DoctorImage src={doctor.image} 
+            alt={`Picture of ${doctor.name}`}
+            effect="blur" />
           <DoctorInfo>
             <DoctorName>{doctor.name}</DoctorName>
             <DoctorSpecialization>{doctor.specialization}</DoctorSpecialization>
