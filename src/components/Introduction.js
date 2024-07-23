@@ -1,5 +1,5 @@
  // src/components/Introduction.js
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -79,7 +79,11 @@ const Background = styled.div`
 
     &:hover{
       cursor: pointer;
-      background: ${(props) => props.theme.secondaryColor};
+      background: ${(props) => props.theme.hoverColor};
+    }
+
+    &:active{
+      transform: scale(0.9);
     }
   }
   

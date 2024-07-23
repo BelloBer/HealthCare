@@ -1,7 +1,7 @@
 .wrapper{
     position: relative;
     width: 420px;
-    height: 450px;
+    height: 500px;
     background-color:#647587;
     color: rgb(255, 255, 255);
     display: flex;
@@ -42,7 +42,7 @@ form .input-box{
     border-radius: 40px;
     border: 2px solid rgba(255,255,255,.1);
     font-size: 16px;
-    color:aqua;
+    color:rgb(250, 252, 252);
     padding: 20px 45px 20px 20px;
 }
 
@@ -52,7 +52,7 @@ form .input-box{
 }
 
 .rememberMe{
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 .authButton{
@@ -69,6 +69,14 @@ form .input-box{
     margin-top: 10px;
 }
 
+.authButton:hover {
+    background-color: #315070;
+}
+
+.authButton:active{
+    transform: scale(0.9);
+}
+
 .goal {
     text-align: center;
 }
@@ -79,5 +87,5 @@ form .input-box{
 }
 
 .changeAuth a {
-    color: blue;
+    color: rgb(5, 5, 177);
 }

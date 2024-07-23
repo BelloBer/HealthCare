@@ -9,7 +9,7 @@ import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 const Sidebar = styled.nav`
     margin-top: 90px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    width: 250px;
+    width: 230px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -22,7 +22,7 @@ const Sidebar = styled.nav`
 `;
 
 const SidebarLink = styled(Link)`
-    width: 84%;
+    width: 82%;
     padding: 20px 20px;
     color: #fff;
     text-decoration: none;
