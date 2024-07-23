@@ -6,7 +6,8 @@ import { auth } from '../firebase'; // Import from firebase.js
 import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-    const [name, setName] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(''); // State to handle errors
@@ -41,11 +42,20 @@ const Register = () => {
                     ) : (
                         <form onSubmit={handleAuth}>
                             <div className='input-box'>
-                                <label>Name:</label>
+                                <label>Firstname:</label>
                                 <input
                                     type="text"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className='input-box'>
+                                <label>Lastname:</label>
+                                <input
+                                    type="text"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
                                     required
                                 />
                             </div>

@@ -9,20 +9,25 @@ import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import Appointments from './pages/Appointments';
 import Hospitals from './components/Hospitals';
+import Doctors from './pages/Doctors';
+import Profile from './components/Profile';
+import Help from './components/Help';
 import Login from './pages/Login';
 import Logout from './components/Logout';
 import Register from './pages/Register';
 import Landing from './pages/Landing';
 import Home from './pages/Home';
 import './App.css';
+import Settings from './components/Settings';
 
 
 
 function App() {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+     
 
-    const handleLogin = () => {
+    const handleLogin = (user) => {
      setIsLoggedIn(true);
      };
 
@@ -45,6 +50,10 @@ function App() {
                             <Route path="/Dashboard" element={<Dashboard/>} />
                             <Route path="/appointments" element={<Appointments/>} />
                             <Route path="/hospitals" element={<Hospitals/>} />
+                            <Route path="/doctors" element={<Doctors/>} />
+                            <Route path="/settings" element={<Settings/>} />
+                            <Route path="/profile" element={<Profile/>} />
+                            <Route path="/help" element={<Help/>} />
                             <Route path="/register" element={<Register/>} />
                             <Route path="/logout" element={<Logout onLogout={handleLogout} />} />
                         </Routes>
@@ -105,46 +114,3 @@ const App = () => {
   export default App;
 */
 
-/*
-const App = () => {
-    const location = useLocation();
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    const handleLogin = () => {
-        setIsLoggedIn(true);
-    };
-
-    const handleLogout = () => {
-        setIsLoggedIn(false);
-    };
-
-    const isLandingPage = location.pathname === '/';
-    const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
-
-    return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyles />
-            {isLandingPage ? <Header /> : <MainHeader />}
-            <div style={{ display: 'flex' }}>
-                {!isLandingPage && !isAuthPage && <Navbar onLogout={handleLogout} />}
-                <div style={{ flex: 1 }}>
-                    <Routes>
-                        <Route path="/" exact element={<Landing />} />
-                        <Route path="/dashboard" element={isLoggedIn ? <Dashboard /> : <Navigate to="/dashboard" />} />
-                        <Route path="/appointments" element={isLoggedIn ? <Appointments /> : <Navigate to="/appointments" />} />
-                        <Route path="/hospitals" element={isLoggedIn ? <Hospitals /> : <Navigate to="/hospitals" />} />
-                        <Route path="/login" element={<Login onLogin={handleLogin} />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/home" element={<Home />} />
-                        <Route path="/logout" element={<Logout onLogout={handleLogout} />} />
-                    </Routes>
-                </div>
-            </div>
-            <Footer />
-        </ThemeProvider>
-    );
-};
-
-export default App;
-
-*/
