@@ -16,8 +16,11 @@ const Container = styled.div`
 
   .dashboard-cards{
     display: flex;
-    
     flex-wrap: wrap;
+    @media (max-width: 768px) {
+      justify-content: center;
+  }
+    
   }
 
   .card {

@@ -125,6 +125,12 @@ const DoctorCard = styled.div`
   width: 95%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    }
 `;
 
 const DoctorImage = styled.img`
