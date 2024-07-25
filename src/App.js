@@ -20,97 +20,58 @@ import Home from './pages/Home';
 import './App.css';
 import Settings from './components/Settings';
 
-
-
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-     
+  const handleLogin = (user) => {
+    setIsLoggedIn(true);
+  };
 
-    const handleLogin = (user) => {
-     setIsLoggedIn(true);
-     };
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
 
-    const handleLogout = () => {
-     setIsLoggedIn(false);
-     };
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
 
-    return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyles />
-            
-            {isLoggedIn ? (
-                <div className='app-layout'>
-                    <MainHeader />
-                    <Navbar onLogout={handleLogout} />
-                    <div className='main-content'>
-                        <Routes>
-                            <Route path="/" exact element={<Landing/>} />
-                            <Route path="/home" element={<Home />} />
-                            <Route path="/Dashboard" element={<Dashboard/>} />
-                            <Route path="/appointments" element={<Appointments/>} />
-                            <Route path="/hospitals" element={<Hospitals/>} />
-                            <Route path="/doctors" element={<Doctors/>} />
-                            <Route path="/settings" element={<Settings/>} />
-                            <Route path="/profile" element={<Profile/>} />
-                            <Route path="/help" element={<Help/>} />
-                            <Route path="/register" element={<Register/>} />
-                            <Route path="/logout" element={<Logout onLogout={handleLogout} />} />
-                        </Routes>
-                    </div>
-                    
-                </div>
-            ) : (
-                <div>
-                
-                <Routes>
-                    <Route path="/" exact element={<Landing/>} />
-                    <Route path="/login" element={<Login onLogin={handleLogin} />} />
-                    <Route path="/register" element={<Register/>} />
-                    <Route path="*" element={<Navigate to="/" />} />
-                </Routes>
-                
-                </div>
-            )}
-
-            
-            
-        </ThemeProvider>
-    );
-}
-
-export default App;
-
-
-
-/*
-const App = () => {
-    const location = useLocation();
-    const isLandingPage = location.pathname === '/';
-  
-    return (
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        {isLandingPage ? <Header /> : <MainHeader />}
-        <div style={{ display: 'flex' }}>
-          {!isLandingPage && <Navbar />}
-          <div style={{ flex: 1 }}>
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      
+      {isLoggedIn ? (
+        <div className='app-layout'>
+          <MainHeader onToggleNavbar={toggleNavbar} />
+          <Navbar onLogout={handleLogout} isOpen={isNavbarOpen} />
+          <div className='main-content'>
             <Routes>
-              <Route path="/" exact element={<Landing />} />
-              <Route path="/Dashboard" element={<Dashboard />} />
-              <Route path="/appointments" element={<Appointments />} />
-              <Route path="/hospitals" element={<Hospitals />} />
-              <Route path="/login" element={<Login  />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="/" exact element={<Landing/>} />
               <Route path="/home" element={<Home />} />
+              <Route path="/Dashboard" element={<Dashboard/>} />
+              <Route path="/appointments" element={<Appointments/>} />
+              <Route path="/hospitals" element={<Hospitals/>} />
+              <Route path="/doctors" element={<Doctors/>} />
+              <Route path="/settings" element={<Settings/>} />
+              <Route path="/profile" element={<Profile/>} />
+              <Route path="/help" element={<Help/>} />
+              <Route path="/register" element={<Register/>} />
+              <Route path="/logout" element={<Logout onLogout={handleLogout} />} />
             </Routes>
           </div>
         </div>
-        <Footer />
-      </ThemeProvider>
-    );
-  };
+      ) : (
+        <div>
+          <Routes>
+            <Route path="/" exact element={<Landing/>} />
+            <Route path="/login" element={<Login onLogin={handleLogin} />} />
+            <Route path="/register" element={<Register/>} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </div>
+      )}
+    </ThemeProvider>
+  );
+}
 
-  export default App;
-*/
-
+export default App;
